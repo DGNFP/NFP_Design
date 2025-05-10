@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NFP | Design | Notice</title>
+    <!-- 프리텐다드 폰트 추가 -->
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/board.css">
+    <!-- 폰트어썸 아이콘 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- 게시판 섹션 -->
+    <section class="board-section">
+        <div class="container">
+            <h2 class="board-section-title">소식</h2>
+            <p class="board-intro">공지사항 및 새 소식을 알려드립니다.</p>
+
+            <div class="news-list">
+                <div class="news-item">
+                    <a href="news_detail.html?id=1" class="news-link">
+                        <span class="news-title">NFP 디자인 신규 웹사이트 오픈 안내</span>
+                        <span class="news-date">2025.05.06</span>
+                    </a>
+                </div>
+                <div class="news-item">
+                    <a href="news_detail.html?id=2" class="news-link">
+                        <span class="news-title">5월 디자인 트렌드 분석 및 적용 사례</span>
+                        <span class="news-date">2025.05.01</span>
+                    </a>
+                </div>
+                <div class="news-item">
+                    <a href="news_detail.html?id=3" class="news-link">
+                        <span class="news-title">NFP 디자인 포트폴리오 업데이트 안내</span>
+                        <span class="news-date">2025.04.25</span>
+                    </a>
+                </div>
+                <div class="news-item">
+                    <a href="news_detail.html?id=4" class="news-link">
+                        <span class="news-title">2025 디자인 워크샵 개최 및 참가 신청</span>
+                        <span class="news-date">2025.04.15</span>
+                    </a>
+                </div>
+
+                <div class="news-item">
+                    <a href="news_detail.html?id=4" class="news-link">
+                        <span class="news-title">2025 디자인 워크샵 개최 및 참가 신청</span>
+                        <span class="news-date">2025.04.15</span>
+                    </a>
+                </div>
+
+                <div class="news-item">
+                    <a href="news_detail.html?id=4" class="news-link">
+                        <span class="news-title">2025 디자인 워크샵 개최 및 참가 신청</span>
+                        <span class="news-date">2025.04.15</span>
+                    </a>
+                </div>
+
+                <div class="news-item">
+                    <a href="news_detail.html?id=4" class="news-link">
+                        <span class="news-title">2025 디자인 워크샵 개최 및 참가 신청</span>
+                        <span class="news-date">2025.04.15</span>
+                    </a>
+                </div>
+
+                <div class="news-item">
+                    <a href="news_detail.html?id=4" class="news-link">
+                        <span class="news-title">2025 디자인 워크샵 개최 및 참가 신청</span>
+                        <span class="news-date">2025.04.15</span>
+                    </a>
+                </div>
+
+                <div class="news-item">
+                    <a href="news_detail.html?id=4" class="news-link">
+                        <span class="news-title">2025 디자인 워크샵 개최 및 참가 신청</span>
+                        <span class="news-date">2025.04.15</span>
+                    </a>
+                </div>
+                
+
+                <div class="news-item">
+                    <a href="news_detail.html?id=5" class="news-link">
+                        <span class="news-title">신규 디자인 서비스 런칭 및 할인 프로모션</span>
+                        <span class="news-date">2025.04.01</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- 스크립트 -->
+            <script src="./components/header.js"></script>
+            <script src="./components/floating.js"></script>
+            <script src="./components/footer.js"></script>
+
+             <!-- 컴포넌트 초기화 -->
+             <script>
+                document.addEventListener('DOMContentLoaded', function() {
+                    // 현재 페이지에 맞게 활성 메뉴 설정 (예: 'home')
+                    createHeader('header-container');
+                    createFooter('footer-container');
+                    createFloatingButtons('floating-buttons-container');
+                });
+                </script>
+
+            <!-- 페이지네이션 -->
+            <div class="pagination">
+                <a href="#" class="page-prev"><i class="fas fa-chevron-left"></i></a>
+                <a href="#" class="active">1</a>
+                <a href="#">2</a>
+                <a href="#">3</a>
+                <a href="#">4</a>
+                <a href="#">5</a>
+                <a href="#" class="page-next"><i class="fas fa-chevron-right"></i></a>
+            </div>
+        </div>
+    </section>
+
+   
+
+</body>
+</html>

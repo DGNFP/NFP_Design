@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>광고/인쇄 디자인 게시판 - NFP DESIGN</title>
+    <link rel="stylesheet" href="css/board.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <!-- 폰트어썸 아이콘 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    
+    <!-- 게시판 섹션 -->
+    <section class="board-section">
+        <div class="container">
+            <h2 class="board-section-title">광고/인쇄 디자인 게시판</h2>
+            <p class="board-intro">현수막, 엑스배너, 명함, 옥외광고 등 다양한 광고/오프라인 매체 디자인</p>
+            
+
+            <div class="all-view-all-wrapper">
+                <a href="board_3x2.html" class="all-view-all-button">웹 디자인</a>
+                <a href="board_5x3.html" class="all-view-all-button">컨텐츠 디자인</a>
+                <a href="board_4x3.html" class="all-view-all-button">영상 디자인</a>
+                <a href="board_3x3_.html" class="all-view-all-button">광고/인쇄 디자인</a>
+                <a href="board_all.html" class="all-view-all-button">전체 작업 보기</a>
+            </div>
+
+            <!-- 카테고리 필터 -->
+            <div class="board-filter">
+                <div class="filter-group">
+                    <ul class="category-filter">
+                        <li><a class="active" data-filter="all">광고 디자인 전체</a></li>
+                        <li><a data-filter="Xbanner">현수막/엑스배너</a></li>
+                        <li><a data-filter="business_card">명함</a></li>
+                        <li><a data-filter="book">브로슈어/카탈로그</a></li>
+                        <li><a data-filter="ad">옥외광고</a></li>
+                    </ul>
+                </div>
+                
+                  <!-- 검색창 -->
+                <div class="board-search">
+                    <input type="text" placeholder="검색어를 입력하세요" class="form-control" id="searchInput">
+                    <button class="search-btn"><i class="fas fa-search"></i></button>
+                </div>
+            </div>
+            
+            <!-- 게시판 그리드 (정사각형 레이아웃 사용) -->
+            <div class="board-grid-ad">
+                <!-- 광고/인쇄 디자인 아이템 1 -->
+                <div class="board-item-square" data-category="Xbanner">
+                    <a href="test_post.html">
+                        <div class="board-item-img">
+                            <img src="img/design1.jpg" alt="브랜드 포스터 디자인">
+                        </div>
+                        <div class="board-item-content">
+                            <h3 class="board-item-title">브랜드 현수막 디자인</h3>
+                            <p class="board-item-desc">브랜드 스토리를 담은 포스터 디자인 시리즈</p>
+                            <p class="board-item-date">2025.02.15</p>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- 광고/인쇄 디자인 아이템 2 -->
+                <div class="board-item-square" data-category="book">
+                    <a href="pages/posts/post.html?id=post2">
+                        <div class="board-item-img">
+                            <img src="img/design1.jpg" alt="브로슈어 디자인">
+                        </div>
+                        <div class="board-item-content">
+                            <h3 class="board-item-title">기업 브로슈어 디자인</h3>
+                            <p class="board-item-desc">기업 정보를 효과적으로 전달하는 브로슈어 디자인</p>
+                            <p class="board-item-date">2025.01.23</p>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- 광고/인쇄 디자인 아이템 3 -->
+                <div class="board-item-square" data-category="Xbanner">
+                    <a href="#">
+                        <div class="board-item-img">
+                            <img src="img/design1.jpg" alt="패키지 디자인">
+                        </div>
+                        <div class="board-item-content">
+                            <h3 class="board-item-title">화장품 엑스배너 디자인</h3>
+                            <p class="board-item-desc">프리미엄 화장품을 위한 고급스러운 패키지 디자인</p>
+                            <p class="board-item-date">2025.01.10</p>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- 광고/인쇄 디자인 아이템 4 -->
+                <div class="board-item-square" data-category="business_card">
+                    <a href="#">
+                        <div class="board-item-img">
+                            <img src="img/design1.jpg" alt="옥외광고 디자인">
+                        </div>
+                        <div class="board-item-content">
+                            <h3 class="board-item-title">버스 명함 디자인</h3>
+                            <p class="board-item-desc">도시 전체를 캔버스로 활용한 버스 래핑 광고 디자인</p>
+                            <p class="board-item-date">2024.12.20</p>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- 광고/인쇄 디자인 아이템 5 -->
+                <div class="board-item-square" data-category="book">
+                    <a href="#">
+                        <div class="board-item-img">
+                            <img src="img/design1.jpg" alt="카탈로그 디자인">
+                        </div>
+                        <div class="board-item-content">
+                            <h3 class="board-item-title">제품 카탈로그 디자인</h3>
+                            <p class="board-item-desc">다양한 제품 라인업을 효과적으로 보여주는 카탈로그 디자인</p>
+                            <p class="board-item-date">2024.12.05</p>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- 광고/인쇄 디자인 아이템 6 -->
+                <div class="board-item-square" data-category="ad">
+                    <a href="#">
+                        <div class="board-item-img">
+                            <img src="img/design1.jpg" alt="명함 디자인">
+                        </div>
+                        <div class="board-item-content">
+                            <h3 class="board-item-title">크리에이티브 옥외광고 디자인</h3>
+                            <p class="board-item-desc">첫인상을 결정짓는 독특한 명함 디자인 프로젝트</p>
+                            <p class="board-item-date">2024.11.28</p>
+                        </div>
+                    </a>
+                </div>
+
+             
+            </div>
+
+            <!-- 컴포넌트 스크립트 -->
+            <script src="./components/header.js"></script>
+            <script src="./components/footer.js"></script>
+            <script src="./components/floating.js"></script>
+
+            <!-- 컴포넌트 초기화 -->
+            <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                // 현재 페이지에 맞게 활성 메뉴 설정 (예: 'home')
+                createHeader('header-container');
+                createFooter('footer-container');
+                createFloatingButtons('floating-buttons-container');
+            });
+            </script>
+
+        <script src="./js/filter.js"></script>
+            
+            <!-- 페이지네이션 -->
+            <div class="pagination">
+                <a href="#" class="page-prev"><i class="fas fa-chevron-left"></i></a>
+                <a href="#" class="active">1</a>
+                <a href="#">2</a>
+                <a href="#">3</a>
+                <a href="#">4</a>
+                <a href="#">5</a>
+                <a href="#" class="page-next"><i class="fas fa-chevron-right"></i></a>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

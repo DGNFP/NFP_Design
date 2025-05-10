@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>영상 디자인 게시판 - NFP DESIGN</title>
+    <link rel="stylesheet" href="css/board.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <!-- 폰트어썸 아이콘 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- 게시판 섹션 -->
+    <section class="board-section">
+        <div class="container">
+            <h2 class="board-section-title">영상 디자인 게시판</h2>
+            <p class="board-intro">영상 제작, 영상 편집, 모션 그래픽 등 영상 관련 작업</p>
+
+            <div class="all-view-all-wrapper">
+                <a href="board_3x2.html" class="all-view-all-button">웹 디자인</a>
+                <a href="board_5x3.html" class="all-view-all-button">컨텐츠 디자인</a>
+                <a href="board_4x3.html" class="all-view-all-button">영상 디자인</a>
+                <a href="board_3x3_.html" class="all-view-all-button">광고/인쇄 디자인</a>
+                <!-- <a href="notice.html" class="all-view-all-button">소식</a> -->
+                <a href="board_all.html" class="all-view-all-button">전체 작업 보기</a>
+            </div>
+            
+            <!-- 카테고리 필터 -->
+<div class="board-filter">
+    <div class="filter-group">
+        <ul class="category-filter">
+            <li><a class="active" data-filter="all">영상 디자인 전체</a></li>
+            <li><a data-filter="make">영상 제작</a></li>
+            <li><a data-filter="edit">영상 편집</a></li>
+            <li><a data-filter="motion">모션그래픽</a></li>
+            <li><a data-filter="youtube">유튜브 썸네일</a></li>
+        </ul>
+    </div>
+                
+           <!-- 검색창 -->
+        <div class="board-search">
+            <input type="text" placeholder="검색어를 입력하세요" class="form-control" id="searchInput">
+            <button class="search-btn"><i class="fas fa-search"></i></button>
+        </div>
+    </div>
+            
+            <!-- 와이드 레이아웃 게시판 그리드 -->
+            <div class="board-grid-wide">
+                <!-- 아이템 1 -->
+                <div class="board-item-wide" data-category="make">
+                    <a href="test_post.html">
+                        <div class="board-item-img">
+                            <img src="img/design1.jpg" alt="와이드 디자인 1">
+                        </div>
+                        <div class="board-item-content">
+                            <h3 class="board-item-title">브랜드 영상제작 - 새로운 시작을 알리는 이미지</h3>
+                            <p class="board-item-date">2025.04.20</p>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- 아이템 2 -->
+                <div class="board-item-wide" data-category="make">
+                    <a href="#">
+                        <div class="board-item-img" >
+                            <img src="img/youtube1.jpg" alt="와이드 디자인 2">
+                        </div>
+                        <div class="board-item-content">
+                            <h3 class="board-item-title">유튜브 썸네일 그 첫번째</h3>
+                            <p class="board-item-date">2025.04.15</p>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- 아이템 3 -->
+                <div class="board-item-wide" data-category="youtube">
+                    <a href="#">
+                        <div class="board-item-img">
+                            <img src="img/youtube2.jpg" alt="와이드 디자인 3">
+                        </div>
+                        <div class="board-item-content">
+                            <h3 class="board-item-title">디지털 마케팅 배너 시리즈</h3>
+                            <p class="board-item-date">2025.04.10</p>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- 아이템 4 -->
+                <div class="board-item-wide" data-category="youtube">
+                    <a href="#">
+                        <div class="board-item-img">
+                            <img src="img/youtube3.jpg" alt="와이드 디자인 4">
+                        </div>
+                        <div class="board-item-content">
+                            <h3 class="board-item-title">소셜 미디어 커버 이미지</h3>
+                            <p class="board-item-date">2025.04.05</p>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- 아이템 5 -->
+                <div class="board-item-wide" data-category="youtube">
+                    <a href="#">
+                        <div class="board-item-img">
+                            <img src="img/youtube4.jpg" alt="와이드 디자인 5">
+                        </div>
+                        <div class="board-item-content">
+                            <h3 class="board-item-title">이커머스 프로모션 슬라이더 디자인</h3>
+                            <p class="board-item-date">2025.04.01</p>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- 아이템 6 -->
+                <div class="board-item-wide" data-category="edit">
+                    <a href="#">
+                        <div class="board-item-img">
+                            <img src="img/youtube3.jpg" alt="와이드 디자인 6">
+                        </div>
+                        <div class="board-item-content">
+                            <h3 class="board-item-title">온라인 광고 배너 세트</h3>
+                            <p class="board-item-date">2025.03.25</p>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- 아이템 7 -->
+                <div class="board-item-wide" data-category="edit">
+                    <a href="#">
+                        <div class="board-item-img">
+                            <img src="img/design1.jpg" alt="와이드 디자인 7">
+                        </div>
+                        <div class="board-item-content">
+                            <h3 class="board-item-title">앱 스크린샷 프로모션 이미지</h3>
+                            <p class="board-item-date">2025.03.20</p>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- 아이템 8 -->
+                <div class="board-item-wide" data-category="motion">
+                    <a href="#">
+                        <div class="board-item-img">
+                            <img src="img/youtube2.jpg" alt="와이드 디자인 8">
+                        </div>
+                        <div class="board-item-content">
+                            <h3 class="board-item-title">웹 프로모션 배너 디자인</h3>
+                            <p class="board-item-date">2025.03.15</p>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- 아이템 9 -->
+                <div class="board-item-wide" data-category="edit">
+                    <a href="#">
+                        <div class="board-item-img">
+                            <img src="./img/design1.jpg" alt="와이드 디자인 9">
+                        </div>
+                        <div class="board-item-content">
+                            <h3 class="board-item-title">이벤트 배너 시리즈</h3>
+                            <p class="board-item-date">2025.03.10</p>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- 아이템 10 -->
+                <div class="board-item-wide" data-category="motion">
+                    <a href="#">
+                        <div class="board-item-img">
+                            <img src="./img/youtube2.jpg" alt="와이드 디자인 10">
+                        </div>
+                        <div class="board-item-content">
+                            <h3 class="board-item-title">뉴스레터 헤더 디자인</h3>
+                            <p class="board-item-date">2025.03.05</p>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- 아이템 11 -->
+                <div class="board-item-wide" data-category="youtube">
+                    <a href="#">
+                        <div class="board-item-img">
+                            <img src="./img/youtube4.jpg" alt="와이드 디자인 11">
+                        </div>
+                        <div class="board-item-content">
+                            <h3 class="board-item-title">디지털 마케팅 캠페인 배너</h3>
+                            <p class="board-item-date">2025.03.01</p>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- 아이템 12 -->
+                <div class="board-item-wide" data-category="youtube">
+                    <a href="#">
+                        <div class="board-item-img">
+                            <img src="./img/youtube2.jpg" alt="와이드 디자인 12">
+                        </div>
+                        <div class="board-item-content">
+                            <h3 class="board-item-title">브랜드 소셜 미디어 배너</h3>
+                            <p class="board-item-date">2025.02.25</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <!-- 컴포넌트 스크립트 -->
+            <script src="./components/header.js"></script>
+            <script src="./components/footer.js"></script>
+            <script src="./components/floating.js"></script>
+
+            <!-- 컴포넌트 초기화 -->
+            <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                // 현재 페이지에 맞게 활성 메뉴 설정
+                createHeader('header-container');
+                createFooter('footer-container');
+                createFloatingButtons('floating-buttons-container');
+            });
+            </script>
+
+        <script src="./js/filter.js"></script>
+            
+            <!-- 페이지네이션 -->
+            <div class="pagination">
+                <a href="#" class="page-prev"><i class="fas fa-chevron-left"></i></a>
+                <a href="#" class="active">1</a>
+                <a href="#">2</a>
+                <a href="#">3</a>
+                <a href="#">4</a>
+                <a href="#">5</a>
+                <a href="#" class="page-next"><i class="fas fa-chevron-right"></i></a>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

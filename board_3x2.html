@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>웹 디자인 게시판 - NFP DESIGN</title>
+    <link rel="stylesheet" href="css/board.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <!-- 폰트어썸 아이콘 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    
+
+    <!-- 게시판 섹션 -->
+    <section class="board-section">
+        <div class="container">
+            <h2 class="board-section-title">웹 디자인 게시판</h2>
+            <p class="board-intro">홈페이지, 상세페이지, 배너디자인 등 웹 기반 디자인</p>
+            
+
+            <div class="all-view-all-wrapper">
+                <a href="board_3x2.html" class="all-view-all-button">웹 디자인</a>
+                <a href="board_5x3.html" class="all-view-all-button">컨텐츠 디자인</a>
+                <a href="board_4x3.html" class="all-view-all-button">영상 디자인</a>
+                <a href="board_3x3_.html" class="all-view-all-button">광고/인쇄 디자인</a>
+                <!-- <a href="notice.html" class="all-view-all-button">소식</a> -->
+                <a href="board_all.html" class="all-view-all-button">전체 작업 보기</a>
+                
+            </div>
+            
+             <!-- 카테고리 필터 -->
+    <div class="board-filter">
+        <div class="filter-group">
+            <ul class="category-filter">
+                <li><a class="active" data-filter="all">웹 디자인 전체</a></li>
+                <li><a data-filter="homepage">홈페이지</a></li>
+                <li><a data-filter="banner">디지털배너</a></li>
+                <li><a data-filter="detail_page">상세페이지</a></li>
+                <li><a data-filter="ux_ui">UX/UI</a></li>
+            </ul>
+        </div>
+        
+        <!-- 검색창 -->
+        <div class="board-search">
+            <input type="text" placeholder="검색어를 입력하세요" class="form-control" id="searchInput">
+            <button class="search-btn"><i class="fas fa-search"></i></button>
+        </div>
+    </div>
+            
+    <!-- 게시판 그리드 -->
+    <div class="board-grid">
+        <!-- 웹 디자인 아이템 1 -->
+        <div class="board-item" data-main="web" data-category="detail_page">
+            <a href="test_post.html">
+                <img src="img/design1.jpg" alt="정보형 상세페이지 디자인">
+                <div class="board-item-content">
+                    <h3 class="board-item-title">정보형 상세페이지 디자인</h3>
+                    <p class="board-item-desc">복잡한 정보를 쉽게 전달하는 상세페이지 디자인</p>
+                    <p class="board-item-date">2025.01.23</p>
+                    <span class="board-item-link">자세히 보기</span>
+                </div>
+            </a>
+        </div>
+
+        <!-- 웹 디자인 아이템 2 -->
+        <div class="board-item" data-main="web" data-category="banner">
+            <a href="pages/posts/post.html?id=post2">
+                <img src="img/design1.jpg" alt="정보형 웹 디자인">
+                <div class="board-item-content">
+                    <h3 class="board-item-title">정보형 디지털 배너</h3>
+                    <p class="board-item-desc">복잡한 정보를 쉽게 전달하는 인포그래픽 디지털 배너</p>
+                    <p class="board-item-date">2025.01.23</p>
+                    <span class="board-item-link">자세히 보기</span>
+                </div>
+            </a>
+        </div>
+
+        <!-- 추가 게시글 아이템들 -->
+        <div class="board-item" data-main="web" data-category="ux_ui">
+            <a href="#">
+                <img src="img/design1.jpg" alt="UI/UX 디자인">
+                <div class="board-item-content">
+                    <h3 class="board-item-title">모바일 앱 UI 디자인</h3>
+                    <p class="board-item-desc">사용자 경험을 극대화한 모바일 앱 UI 디자인</p>
+                    <p class="board-item-date">2025.01.10</p>
+                    <span class="board-item-link">자세히 보기</span>
+                </div>
+            </a>
+        </div>
+
+        <div class="board-item" data-main="web" data-category="homepage">
+            <a href="#">
+                <img src="img/design1.jpg" alt="브랜딩 디자인">
+                <div class="board-item-content">
+                    <h3 class="board-item-title">브랜드 홈페이지 디자인</h3>
+                    <p class="board-item-desc">스타트업을 위한 브랜드 아이덴티티 홈페이지 프로젝트</p>
+                    <p class="board-item-date">2024.12.20</p>
+                    <span class="board-item-link">자세히 보기</span>
+                </div>
+            </a>
+        </div>
+
+        <div class="board-item" data-main="web" data-category="homepage">
+            <a href="#">
+                <img src="img/design1.jpg" alt="웹디자인">
+                <div class="board-item-content">
+                    <h3 class="board-item-title">반응형 웹사이트 디자인</h3>
+                    <p class="board-item-desc">모든 디바이스에 최적화된 반응형 웹 디자인 작업</p>
+                    <p class="board-item-date">2024.12.05</p>
+                    <span class="board-item-link">자세히 보기</span>
+                </div>
+            </a>
+        </div>
+
+        <div class="board-item" data-main="web" data-category="banner">
+            <a href="#">
+                <img src="img/design1.jpg" alt="포스터 디자인">
+                <div class="board-item-content">
+                    <h3 class="board-item-title">이벤트 디지털배너 디자인</h3>
+                    <p class="board-item-desc">문화 행사를 위한 크리에이티브 디지털배너 디자인</p>
+                    <p class="board-item-date">2024.11.28</p>
+                    <span class="board-item-link">자세히 보기</span>
+                </div>
+            </a>
+        </div>
+    </div>
+
+            <!-- 컴포넌트 스크립트 -->
+      <script src="./components/header.js"></script>
+      <script src="./components/footer.js"></script>
+      <script src="./components/floating.js"></script>
+
+       <!-- 컴포넌트 초기화 -->
+       <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // 현재 페이지에 맞게 활성 메뉴 설정 (예: 'home')
+            createHeader('header-container');
+            createFooter('footer-container');
+            createFloatingButtons('floating-buttons-container');
+          });
+        </script>
+
+    <script src="./js/filter.js"></script>
+            
+            <!-- 페이지네이션 -->
+            <div class="pagination">
+                <a href="#" class="page-prev"><i class="fas fa-chevron-left"></i></a>
+                <a href="#" class="active">1</a>
+                <a href="#">2</a>
+                <a href="#">3</a>
+                <a href="#">4</a>
+                <a href="#">5</a>
+                <a href="#" class="page-next"><i class="fas fa-chevron-right"></i></a>
+            </div>
+            
+            
+    </section>
+             
+            </form>
+        </div>
+    </div>
+
+    
+</body>
+</html>

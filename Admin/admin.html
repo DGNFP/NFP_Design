@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <title>NFP DESIGN | Admin</title>
+  <!-- <link rel="stylesheet" href="../css/admin_style.css" /> -->
+  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+  <!-- 폰트어썸 아이콘 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link rel="stylesheet" href="../css/cms-custom.css">
+
+  <script src="../js/admin_post.js"></script>
+
+</head>
+
+<body>
+  
+
+  <!-- 게시판 섹션 -->
+  <section class="admin-section">
+    <div class="container">
+        <h2 class="admin-section-title">NFP DESIGN 관리자 페이지</h2>
+        <p class="admin-intro">관리자 페이지 입니다.</p>
+
+<!-- 검색창 -->
+<div class="admin-search">
+    <input type="text" placeholder="검색어를 입력하세요" class="form-control">
+    <button class="search-btn"><i class="fas fa-search"></i></button>
+</div>
+</div>
+
+
+  <!-- 게시글 작성 폼 모달 -->
+  <div id="write-modal" class="modal">
+    <div class="modal-content">
+
+        <span class="close-button">&times;</span>
+        <h2>새 게시글 작성</h2>
+        <form id="post-form">
+            <div class="form-group">
+                <label for="title">제목</label>
+                <input type="text" id="title" class="form-control" placeholder="제목을 입력하세요" required>
+            </div>
+
+
+            <div class="form-group">
+                <label for="primary-category">1차 카테고리</label>
+                <select id="primary-category" class="form-control primary-category" required>
+                  <option value="">선택하세요</option>
+                  <option value="웹 디자인">웹 디자인</option>
+                  <option value="컨텐츠 디자인">컨텐츠 디자인</option>
+                  <option value="영상 디자인">영상 디자인</option>
+                  <option value="광고/인쇄 디자인">광고/인쇄 디자인</option>
+                </select>
+              </div>
+              
+              <div class="form-group">
+                <label for="secondary-category">2차 카테고리</label>
+                <select id="secondary-category" class="form-control secondary-category" required>
+                  <option value="">1차 카테고리를 먼저 선택하세요</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="image-upload">이미지 업로드</label>
+                <div class="custom-file-upload">
+                  <label for="image-upload" class="btn">파일 선택</label>
+                  <span id="file-name">선택된 파일 없음</span>
+                  <input type="file" id="image-upload" accept="image/*" style="display: none;">
+                </div>
+              </div>
+
+
+
+            <div class="form-group">
+                <label for="content">내용</label>
+                <textarea id="content" class="form-control" placeholder="내용을 입력하세요" rows="10" required></textarea>
+            </div>
+            <button type="submit" class="btn">게시하기</button>
+        </form>
+    </div>
+</div>
+
+<!-- 글쓰기 버튼 (우측 하단에 고정) -->
+<div class="write-btn-container">
+    <button id="write-btn" class="btn write-btn">
+      <i class="fas fa-pen"></i> <span> 글쓰기</span>
+    </button>
+  </div>
+
+  <main id="postList">
+    <!-- JS로 게시글 카드들 자동 삽입 -->
+  </main>
+
+  <div id="pagination"></div>
+
+  <script src="https://unpkg.com/netlify-cms@^2.0.0/dist/netlify-cms.js"></script>
+  <script src="../Admin/preview.js"></script>
+  
+  
+</body>
+</html>
+
+
+

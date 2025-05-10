@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NFP | 소식</title>
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="./css/board.css">
+    <!-- Font Awesome 아이콘 추가 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- 헤더 자리 -->
+    <div id="header-container"></div>
+
+    <!-- 페이지 배너 -->
+    <!-- <section class="page-banner">
+        <div class="container">
+            <h1>소식</h1>
+            <p>NFP 디자인의 새로운 소식과 디자인 트렌드를 확인하세요</p>
+        </div>
+    </section> -->
+
+    <!-- 소식 게시판 섹션 -->
+    <section class="board-section">
+        <div class="container">
+            <h2 class="board-section-title">소식</h2>
+            <p class="board-intro">NFP 디자인의 최신 소식과 이벤트, 디자인 트렌드 정보를 확인하세요</p>
+            
+            <!-- 검색창 -->
+            <div class="board-search-wrapper">
+                <div class="board-search">
+                    <input type="text" placeholder="검색어를 입력하세요" class="form-control">
+                    <button class="search-btn"><i class="fas fa-search"></i></button>
+                </div>
+            </div>
+
+            <!-- 소식 리스트 -->
+            <div class="news-list">
+                <div class="news-item">
+                    <a href="news_detail.html?id=1" class="news-link">
+                        <span class="news-title">NFP 디자인 신규 웹사이트 오픈 안내</span>
+                        <span class="news-date">2025.05.06</span>
+                    </a>
+                </div>
+                <div class="news-item">
+                    <a href="news_detail.html?id=2" class="news-link">
+                        <span class="news-title">5월 디자인 트렌드 분석 및 적용 사례</span>
+                        <span class="news-date">2025.05.01</span>
+                    </a>
+                </div>
+                <div class="news-item">
+                    <a href="news_detail.html?id=3" class="news-link">
+                        <span class="news-title">NFP 디자인 포트폴리오 업데이트 안내</span>
+                        <span class="news-date">2025.04.25</span>
+                    </a>
+                </div>
+                <div class="news-item">
+                    <a href="news_detail.html?id=4" class="news-link">
+                        <span class="news-title">2025 디자인 워크샵 개최 및 참가 신청</span>
+                        <span class="news-date">2025.04.15</span>
+                    </a>
+                </div>
+                <div class="news-item">
+                    <a href="news_detail.html?id=5" class="news-link">
+                        <span class="news-title">신규 디자인 서비스 런칭 및 할인 프로모션</span>
+                        <span class="news-date">2025.04.01</span>
+                    </a>
+                </div>
+                <div class="news-item">
+                    <a href="news_detail.html?id=6" class="news-link">
+                        <span class="news-title">2025년 1분기 디자인 트렌드 리포트</span>
+                        <span class="news-date">2025.03.28</span>
+                    </a>
+                </div>
+                <div class="news-item">
+                    <a href="news_detail.html?id=7" class="news-link">
+                        <span class="news-title">NFP 디자인 신규 파트너십 체결 소식</span>
+                        <span class="news-date">2025.03.15</span>
+                    </a>
+                </div>
+                <div class="news-item">
+                    <a href="news_detail.html?id=8" class="news-link">
+                        <span class="news-title">디자인 리소스 무료 배포 이벤트 안내</span>
+                        <span class="news-date">2025.03.01</span>
+                    </a>
+                </div>
+                <div class="news-item">
+                    <a href="news_detail.html?id=9" class="news-link">
+                        <span class="news-title">웹 디자인 최신 트렌드 및 기술 분석</span>
+                        <span class="news-date">2025.02.20</span>
+                    </a>
+                </div>
+                <div class="news-item">
+                    <a href="news_detail.html?id=10" class="news-link">
+                        <span class="news-title">NFP 디자인 신규 포트폴리오 공개</span>
+                        <span class="news-date">2025.02.10</span>
+                    </a>
+                </div>
+                <div class="news-item">
+                    <a href="news_detail.html?id=11" class="news-link">
+                        <span class="news-title">디자인 세미나 후기 및 주요 내용 공유</span>
+                        <span class="news-date">2025.01.25</span>
+                    </a>
+                </div>
+                <div class="news-item">
+                    <a href="news_detail.html?id=12" class="news-link">
+                        <span class="news-title">2025년 디자인 계획 및 서비스 안내</span>
+                        <span class="news-date">2025.01.05</span>
+                    </a>
+                </div>
+            </div>
+            
+           <!-- 페이지네이션 -->
+           <div class="pagination">
+            <a href="#" class="page-prev"><i class="fas fa-chevron-left"></i></a>
+            <a href="#" class="active">1</a>
+            <a href="#">2</a>
+            <a href="#">3</a>
+            <a href="#">4</a>
+            <a href="#">5</a>
+            <a href="#" class="page-next"><i class="fas fa-chevron-right"></i></a>
+        </div>
+        </div>
+    </section>
+
+    <!-- 푸터 자리 -->
+    <!-- <div id="footer-container"></div> -->
+
+    <!-- 플로팅 버튼 자리 -->
+    <!-- <div id="floating-buttons-container"></div> -->
+
+    <!-- 컴포넌트 스크립트 -->
+    <script src="./components/header.js"></script>
+    <script src="./components/floating.js"></script>
+    <script src="./components/footer.js"></script>
+    
+    <!-- 컴포넌트 초기화 -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // 현재 페이지에 맞게 활성 메뉴 설정
+            createHeader('header-container');
+            createFooter('footer-container');
+            createFloatingButtons('floating-buttons-container');
+        });
+    </script>
+</body>
+</html>

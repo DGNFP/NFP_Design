@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>컨텐츠 디자인 게시판 - NFP DESIGN</title>
+    <link rel="stylesheet" href="css/board.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/additional-layouts.css">
+    <!-- 폰트어썸 아이콘 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- 게시판 섹션 -->
+    <section class="board-section">
+        <div class="container">
+            <h2 class="board-section-title">컨텐츠 디자인 게시판</h2>
+            <p class="board-intro">카드뉴스, 포스터, SNS광고 등 다양한 디지털 컨텐츠</p>
+
+            <div class="all-view-all-wrapper">
+                <a href="board_3x2.html" class="all-view-all-button">웹 디자인</a>
+                <a href="board_5x3.html" class="all-view-all-button">컨텐츠 디자인</a>
+                <a href="board_4x3.html" class="all-view-all-button">영상 디자인</a>
+                <a href="board_3x3_.html" class="all-view-all-button">광고/인쇄 디자인</a>
+                <!-- <a href="notice.html" class="all-view-all-button">소식</a> -->
+                <a href="board_all.html" class="all-view-all-button">전체 작업 보기</a>
+            </div>
+            
+         
+             <!-- 카테고리 필터 -->
+<div class="board-filter">
+    <div class="filter-group">
+        <ul class="category-filter">
+            <li><a class="active" data-filter="all">컨텐츠 디자인 전체</a></li>
+            <li><a data-filter="cardnews">카드뉴스</a></li>
+            <li><a data-filter="poster">포스터</a></li>
+            <li><a data-filter="sns">SNS광고</a></li>
+            <!-- <li><a data-filter="peed">피드광고</a></li> -->
+        </ul>
+    </div>
+                
+                 <!-- 검색창 -->
+        <div class="board-search">
+            <input type="text" placeholder="검색어를 입력하세요" class="form-control" id="searchInput">
+            <button class="search-btn"><i class="fas fa-search"></i></button>
+        </div>
+    </div>
+            
+            <!-- 정사각형 레이아웃 게시판 그리드 -->
+            <div class="board-grid-square">
+                <!-- 아이템 1 -->
+                <div class="board-item-square" data-category="cardnews">
+                    <a href="test_post.html">
+                        <div class="board-item-img">
+                            <img src="img/design1.jpg" alt="정사각형 디자인 1">
+                        </div>
+                        <div class="board-item-content">
+                            <h3 class="board-item-title">미니멀 로고 디자인 카드뉴스</h3>
+                            <p class="board-item-desc">심플하면서도 강렬한 인상을 주는 미니멀 스타일의 카드뉴스 프로젝트입니다.</p>
+                            <p class="board-item-date">2025.04.18</p>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- 아이템 2 -->
+                <div class="board-item-square" data-category="poster">
+                    <a href="#">
+                        <div class="board-item-img">
+                            <img src="img/design1.jpg" alt="정사각형 디자인 2">
+                        </div>
+                        <div class="board-item-content">
+                            <h3 class="board-item-title">소셜 미디어 포스트 디자인</h3>
+                            <p class="board-item-desc">인스타그램과 페이스북을 위한 매력적인 소셜 미디어 포스트 디자인 시리즈입니다.</p>
+                            <p class="board-item-date">2025.04.15</p>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- 아이템 3 -->
+                <div class="board-item-square" data-category="sns">
+                    <a href="#">
+                        <div class="board-item-img">
+                            <img src="img/design1.jpg" alt="정사각형 디자인 3">
+                        </div>
+                        <div class="board-item-content">
+                            <h3 class="board-item-title">아이콘 세트 피드광고</h3>
+                            <p class="board-item-desc">웹사이트와 모바일 앱을 위한 일관된 스타일의 아이콘 세트입니다.</p>
+                            <p class="board-item-date">2025.04.10</p>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- 아이템 4 -->
+                <div class="board-item-square" data-category="sns">
+                    <a href="#">
+                        <div class="board-item-img">
+                            <img src="img/design1.jpg" alt="정사각형 디자인 4">
+                        </div>
+                        <div class="board-item-content">
+                            <h3 class="board-item-title">제품 포장 인스타 배너너</h3>
+                            <p class="board-item-desc">지속가능한 재료를 활용한 친환경적이고 세련된 제품 포장 디자인입니다.</p>
+                            <p class="board-item-date">2025.04.07</p>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- 아이템 5 -->
+                <div class="board-item-square" data-category="cardnews">
+                    <a href="#">
+                        <div class="board-item-img">
+                            <img src="img/design1.jpg" alt="정사각형 디자인 5">
+                        </div>
+                        <div class="board-item-content">
+                            <h3 class="board-item-title">모바일 앱 카드뉴스</h3>
+                            <p class="board-item-desc">다양한 앱에 적용 가능한 현대적이고 사용자 친화적인 UI 컴포넌트 세트입니다.</p>
+                            <p class="board-item-date">2025.04.05</p>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- 아이템 6 -->
+                <div class="board-item-square" data-category="sns">
+                    <a href="#">
+                        <div class="board-item-img">
+                            <img src="img/design1.jpg" alt="정사각형 디자인 6">
+                        </div>
+                        <div class="board-item-content">
+                            <h3 class="board-item-title">인포그래픽 네이버 블로그</h3>
+                            <p class="board-item-desc">복잡한 데이터를 시각적으로 쉽게 이해할 수 있게 만든 인포그래픽 디자인입니다.</p>
+                            <p class="board-item-date">2025.04.02</p>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- 아이템 7 -->
+                <div class="board-item-square" data-category="sns">
+                    <a href="#">
+                        <div class="board-item-img">
+                            <img src="img/design1.jpg" alt="정사각형 디자인 7">
+                        </div>
+                        <div class="board-item-content">
+                            <h3 class="board-item-title">명함 피드광고</h3>
+                            <p class="board-item-desc">다양한 비즈니스를 위한 독특하고 전문적인 명함 디자인 모음입니다.</p>
+                            <p class="board-item-date">2025.03.29</p>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- 아이템 8 -->
+                <div class="board-item-square" data-category="cardnews">
+                    <a href="#">
+                        <div class="board-item-img">
+                            <img src="img/design1.jpg" alt="정사각형 디자인 8">
+                        </div>
+                        <div class="board-item-content">
+                            <h3 class="board-item-title">북커버 디자인</h3>
+                            <p class="board-item-desc">시선을 사로잡는 매력적인 북커버 디자인 시리즈입니다.</p>
+                            <p class="board-item-date">2025.03.25</p>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- 아이템 9 -->
+                <div class="board-item-square" data-category="poster">
+                    <a href="#">
+                        <div class="board-item-img">
+                            <img src="img/design1.jpg" alt="정사각형 디자인 9">
+                        </div>
+                        <div class="board-item-content">
+                            <h3 class="board-item-title">브랜드 컬러 포스터</h3>
+                            <p class="board-item-desc">다양한 브랜드 아이덴티티를 위한 세심하게 선별된 컬러 팔레트 컬렉션입니다.</p>
+                            <p class="board-item-date">2025.03.22</p>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- 아이템 10 -->
+                <div class="board-item-square" data-category="sns">
+                    <a href="#">
+                        <div class="board-item-img">
+                            <img src="img/design1.jpg" alt="정사각형 디자인 10">
+                        </div>
+                        <div class="board-item-content">
+                            <h3 class="board-item-title">패턴 디자인 카카오배너</h3>
+                            <p class="board-item-desc">다양한 제품과 배경에 활용할 수 있는 현대적인 패턴 디자인 모음입니다.</p>
+                            <p class="board-item-date">2025.03.18</p>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- 아이템 11 -->
+                <div class="board-item-square" data-category="cardnews">
+                    <a href="#">
+                        <div class="board-item-img">
+                            <img src="img/design1.jpg" alt="정사각형 디자인 11">
+                        </div>
+                        <div class="board-item-content">
+                            <h3 class="board-item-title">타이포그래피 포스터</h3>
+                            <p class="board-item-desc">글자의 아름다움을 극대화한 예술적인 타이포그래피 포스터 작품입니다.</p>
+                            <p class="board-item-date">2025.03.15</p>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- 아이템 12 -->
+                <div class="board-item-square" data-category="sns">
+                    <a href="#">
+                        <div class="board-item-img">
+                            <img src="img/design1.jpg" alt="정사각형 디자인 12">
+                        </div>
+                        <div class="board-item-content">
+                            <h3 class="board-item-title">3D 렌더링 인스타광고</h3>
+                            <p class="board-item-desc">실험적이고 미래지향적인 3D 렌더링 아트워크 시리즈입니다.</p>
+                            <p class="board-item-date">2025.03.12</p>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- 아이템 13 -->
+                <div class="board-item-square" data-category="cardnews">
+                    <a href="#">
+                        <div class="board-item-img">
+                            <img src="img/design1.jpg" alt="정사각형 디자인 13">
+                        </div>
+                        <div class="board-item-content">
+                            <h3 class="board-item-title">일러스트레이션 작품</h3>
+                            <p class="board-item-desc">독특한 스타일의 디지털 일러스트레이션 작품 모음입니다.</p>
+                            <p class="board-item-date">2025.03.09</p>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- 아이템 14 -->
+                <div class="board-item-square" data-category="poster">
+                    <a href="#">
+                        <div class="board-item-img">
+                            <img src="img/design1.jpg" alt="정사각형 디자인 14">
+                        </div>
+                        <div class="board-item-content">
+                            <h3 class="board-item-title">웹사이트 UI 키트</h3>
+                            <p class="board-item-desc">현대적인 웹사이트 디자인을 위한 포괄적인 UI 컴포넌트 키트입니다.</p>
+                            <p class="board-item-date">2025.03.05</p>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- 아이템 15 -->
+                <div class="board-item-square" data-category="cardnews">
+                    <a href="#">
+                        <div class="board-item-img">
+                            <img src="img/design1.jpg" alt="정사각형 디자인 15">
+                        </div>
+                        <div class="board-item-content">
+                            <h3 class="board-item-title">모션 그래픽 썸네일</h3>
+                            <p class="board-item-desc">다이나믹한 모션 그래픽 작품을 위한 매력적인 썸네일 디자인입니다.</p>
+                            <p class="board-item-date">2025.03.01</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <!-- 컴포넌트 스크립트 -->
+            <script src="./components/header.js"></script>
+            <script src="./components/footer.js"></script>
+            <script src="./components/floating.js"></script>
+
+            
+
+            <!-- 컴포넌트 초기화 -->
+            <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                // 현재 페이지에 맞게 활성 메뉴 설정
+                createHeader('header-container');
+                createFooter('footer-container');
+                createFloatingButtons('floating-buttons-container');
+            });
+            </script>
+
+        <script src="./js/filter.js"></script>
+            
+            <!-- 페이지네이션 -->
+            <div class="pagination">
+                <a href="#" class="page-prev"><i class="fas fa-chevron-left"></i></a>
+                <a href="#" class="active">1</a>
+                <a href="#">2</a>
+                <a href="#">3</a>
+                <a href="#">4</a>
+                <a href="#">5</a>
+                <a href="#" class="page-next"><i class="fas fa-chevron-right"></i></a>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

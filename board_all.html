@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>전체 게시판 - NFP DESIGN</title>
+    <link rel="stylesheet" href="css/board.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <!-- 폰트어썸 아이콘 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    
+    <!-- 게시판 섹션 -->
+    <section class="board-section">
+        <div class="container">
+            <h2 class="board-section-title">전체 게시판</h2>
+            <p class="board-intro">모든 작업물을을 모아둔 게시판</p>
+            
+            <div class="all-view-all-wrapper">
+                <a href="board_3x2.html" class="all-view-all-button">웹 디자인</a>
+                <a href="board_5x3.html" class="all-view-all-button">컨텐츠 디자인</a>
+                <a href="board_4x3.html" class="all-view-all-button">영상 디자인</a>
+                <a href="board_3x3_.html" class="all-view-all-button">광고/인쇄 디자인</a>
+            </div>
+
+              <!-- 카테고리 필터 -->
+            <div class="board-filter">
+                <div class="filter-group">
+                    <ul class="category-filter">
+                        <li><a class="active" data-filter="all">전체</a></li>
+                        <li><a data-filter="web">웹 디자인</a></li>
+                        <li><a data-filter="content">컨텐츠 디자인</a></li>
+                        <li><a data-filter="video">영상 디자인</a></li>
+                        <li><a data-filter="ad">광고/인쇄 디자인</a></li>
+                    </ul>
+                </div>
+                
+                <!-- 검색창 -->
+                <div class="board-search">
+                    <input type="text" placeholder="검색어를 입력하세요" class="form-control">
+                    <button class="search-btn"><i class="fas fa-search"></i></button>
+                </div>
+            </div>
+
+
+
+
+
+
+
+            <!-- 게시판 컨텐츠 -->
+    <section class="board-all-container">
+        
+
+        <div class="board-all-grid">
+            <!-- 카드뉴스 아이템 1 -->
+            <div class="board-all-item" data-main="content" data-category="cardnews">
+                <a href="test_post.html">
+                    <img src="./img/design1.jpg" alt="브랜드 카드뉴스">
+                    <div class="board-all-item-content">
+                        <h3 class="board-all-item-title">브랜드 카드뉴스</h3>
+                        <p class="board-all-item-desc">브랜드 스토리를 담은 카드뉴스 시리즈</p>
+                        <p class="board-all-item-date">2025.02.15</p>
+                        <a href="test_post.html" class="board-all-item-link">자세히 보기</a>
+                    </div>
+                </a>
+            </div>
+
+            <!-- 카드뉴스 아이템 2 -->
+            <div class="board-all-item" data-main="web" data-category="detail_page">
+                <a href="../post/content_design/contents_post.html">
+                    <img src="./img/design1.jpg" alt="정보형 카드뉴스">
+                    <div class="board-all-item-content">
+                        <h3 class="board-all-item-title">정보형 상세페이지</h3>
+                        <p class="board-all-item-desc">복잡한 정보를 쉽게 전달하는 인포그래픽 카드뉴스</p>
+                        <p class="board-all-item-date">2025.01.23</p>
+                        <a href="post2.html" class="board-all-item-link">자세히 보기</a>
+                    </div>
+                </a>
+            </div>
+
+            <!-- 카드뉴스 아이템 3 -->
+            <div class="board-all-item" data-main="ad" data-category="Xbanner">
+                <a href="../post/content_design/contents_post.html">
+                    <img src="./img/design1.jpg" alt="시즌 프로모션 카드뉴스">
+                    <div class="board-all-item-content">
+                        <h3 class="board-all-item-title">시즌 현수막</h3>
+                        <p class="board-all-item-desc">여름 시즌 특별 프로모션을 위한 카드뉴스 디자인</p>
+                        <p class="board-all-item-date">2024.12.10</p>
+                        <a href="post3.html" class="board-all-item-link">자세히 보기</a>
+                    </div>
+                </a>
+            </div>
+
+            <!-- 카드뉴스 아이템 4 -->
+            <div class="board-all-item" data-main="video" data-category="motion">
+                <a href="post4.html">
+                    <img src="./img/design1.jpg" alt="제품 소개 카드뉴스">
+                    <div class="board-all-item-content">
+                        <h3 class="board-all-item-title">제품 모션그래픽</h3>
+                        <p class="board-all-item-desc">신제품의 특징과 장점을 소개하는 카드뉴스</p>
+                        <p class="board-all-item-date">2024.11.25</p>
+                        <a href="post4.html" class="board-all-item-link">자세히 보기</a>
+                    </div>
+                </a>
+            </div>
+
+            <!-- 카드뉴스 아이템 5 -->
+            <div class="board-all-item" data-main="web" data-category="homepage">
+                <a href="post5.html">
+                    <img src="./img/design1.jpg" alt="이벤트 안내 카드뉴스">
+                    <div class="board-all-item-content">
+                        <h3 class="board-all-item-title">이벤트 홈페이지</h3>
+                        <p class="board-all-item-desc">오프라인 이벤트 참여 방법을 안내하는 카드뉴스</p>
+                        <p class="board-all-item-date">2024.10.18</p>
+                        <a href="post5.html" class="board-all-item-link">자세히 보기</a>
+                    </div>
+                </a>
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+
+
+           
+
+
+
+
+
+
+
+
+
+            
+
+
+
+
+
+
+
+
+
+
+
+
+            <!-- 컴포넌트 스크립트 -->
+            <script src="./components/header.js"></script>
+            <script src="./components/footer.js"></script>
+            <script src="./components/floating.js"></script>
+
+
+
+            <!-- 컴포넌트 초기화 -->
+            <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                // 현재 페이지에 맞게 활성 메뉴 설정 (예: 'home')
+                createHeader('header-container');
+                createFooter('footer-container');
+                createFloatingButtons('floating-buttons-container');
+            });
+            </script>
+
+        <script src="./js/filter.js"></script>
+            
+            <!-- 페이지네이션 -->
+            <div class="pagination">
+                <a href="#" class="page-prev"><i class="fas fa-chevron-left"></i></a>
+                <a href="#" class="active">1</a>
+                <a href="#">2</a>
+                <a href="#">3</a>
+                <a href="#">4</a>
+                <a href="#">5</a>
+                <a href="#" class="page-next"><i class="fas fa-chevron-right"></i></a>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

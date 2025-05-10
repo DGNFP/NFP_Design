@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <title>NFP DESIGN | 게시글</title>
+  <link rel="stylesheet" href="../../css/admin_style.css" />
+  <!-- 폰트어썸 아이콘 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <style>
+    /* 게시글 상세 페이지 스타일 */
+    .post-detail-container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+    
+    .post-header {
+      margin-bottom: 30px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      padding-bottom: 20px;
+    }
+    
+    .post-title {
+      font-size: 32px;
+      font-weight: var(--font-black);
+      margin-bottom: 15px;
+      color: var(--accent-color);
+    }
+    
+    .post-meta {
+      display: flex;
+      gap: 20px;
+      color: rgba(255, 255, 255, 0.7);
+      font-size: 14px;
+      margin-bottom: 15px;
+    }
+    
+    .post-category-tag {
+      display: inline-block;
+      background-color: var(--secondary-color);
+      padding: 4px 8px;
+      border-radius: 4px;
+      font-size: 12px;
+      margin-right: 10px;
+    }
+    
+    .post-image {
+      margin-bottom: 30px;
+      border-radius: 8px;
+      overflow: hidden;
+      max-height: 500px;
+    }
+    
+    .post-image img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+    
+    .post-content {
+      line-height: 1.8;
+      font-size: 16px;
+      margin-bottom: 40px;
+    }
+    
+    .back-button {
+      margin-top: 30px;
+      display: inline-block;
+    }
+    
+    .post-navigation {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 50px;
+      padding-top: 20px;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    
+    .post-nav-button {
+      display: flex;
+      align-items: center;
+      color: var(--text-color);
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+    
+    .post-nav-button:hover {
+      color: var(--accent-color);
+    }
+    
+    .post-nav-prev i {
+      margin-right: 10px;
+    }
+    
+    .post-nav-next i {
+      margin-left: 10px;
+    }
+    
+    @media (max-width: 768px) {
+      .post-title {
+        font-size: 24px;
+      }
+      
+      .post-meta {
+        flex-direction: column;
+        gap: 5px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  
+  <!-- 게시글 상세 섹션 -->
+  <section class="post-section">
+    <div class="post-detail-container">
+      <button class="btn back-button" onclick="goBack()">
+        <i class="fas fa-arrow-left"></i> 목록으로
+      </button>
+      
+      <div id="post-detail">
+        <!-- 게시글 내용이 JS로 채워집니다 -->
+        <div class="loading">게시글을 불러오는 중...</div>
+      </div>
+      
+      <div class="post-navigation">
+        <a href="#" class="post-nav-button post-nav-prev" id="prev-post">
+          <i class="fas fa-chevron-left"></i> 이전 게시글
+        </a>
+        <a href="#" class="post-nav-button post-nav-next" id="next-post">
+          다음 게시글 <i class="fas fa-chevron-right"></i>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // URL에서 게시글 ID 가져오기
+      const urlParams = new URLSearchParams(window.location.search);
+      const postId = parseInt(urlParams.get('id'));
+      
+      // 로컬 스토리지에서 게시글 목록 가져오기
+      const allPosts = JSON.parse(localStorage.getItem('nfpPosts') || '[]');
+      
+      // 현재 게시글 찾기
+      const currentPostIndex = allPosts.findIndex(post => post.id === postId);
+      const currentPost = allPosts[currentPostIndex];
+      
+      if (!currentPost) {
+        document.getElementById('post-detail').innerHTML = '<div class="error">게시글을 찾을 수 없습니다.</div>';
+        document.getElementById('prev-post').style.visibility = 'hidden';
+        document.getElementById('next-post').style.visibility = 'hidden';
+        return;
+      }
+      
+      // 게시글 상세 정보 표시
+      const postDetailContainer = document.getElementById('post-detail');
+      postDetailContainer.innerHTML = `
+        <div class="post-header">
+          <h1 class="post-title">${currentPost.title}</h1>
+          <div class="post-meta">
+            <span class="post-date"><i class="far fa-calendar-alt"></i> ${currentPost.date}</span>
+          </div>
+          <div>
+            <span class="post-category-tag">${currentPost.category1}</span>
+            <span class="post-category-tag">${currentPost.category2}</span>
+          </div>
+        </div>
+        
+        ${currentPost.image ? `
+        <div class="post-image">
+          <img src="${currentPost.image}" alt="${currentPost.title}">
+        </div>
+        ` : ''}
+        
+        <div class="post-content">
+          ${formatContent(currentPost.content)}
+        </div>
+      `;
+      
+      // 이전/다음 게시글 버튼 설정
+      const prevPostBtn = document.getElementById('prev-post');
+      const nextPostBtn = document.getElementById('next-post');
+      
+      // 이전 게시글 버튼
+      if (currentPostIndex < allPosts.length - 1) {
+        const prevPost = allPosts[currentPostIndex + 1];
+        prevPostBtn.href = `post_detail.html?id=${prevPost.id}`;
+        prevPostBtn.title = prevPost.title;
+      } else {
+        prevPostBtn.style.visibility = 'hidden';
+      }
+      
+      // 다음 게시글 버튼
+      if (currentPostIndex > 0) {
+        const nextPost = allPosts[currentPostIndex - 1];
+        nextPostBtn.href = `post_detail.html?id=${nextPost.id}`;
+        nextPostBtn.title = nextPost.title;
+      } else {
+        nextPostBtn.style.visibility = 'hidden';
+      }
+    });
+    
+    // 게시글 내용 포맷팅 함수
+    function formatContent(content) {
+      // 줄바꿈을 <p> 태그로 변환
+      return content.split('\n\n')
+        .filter(paragraph => paragraph.trim() !== '')
+        .map(paragraph => `<p>${paragraph}</p>`)
+        .join('');
+    }
+    
+    // 목록으로 돌아가는 함수
+    function goBack() {
+      window.location.href = 'index.html';
+    }
+  </script>
+  
+</body>
+</html>
