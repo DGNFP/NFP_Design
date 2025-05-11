@@ -25,7 +25,7 @@ function createFooter(targetElementId = 'footer-container', year = new Date().ge
                 <a href="index.html#" class="social-link_B">B</a>
                 <a href="index.html#" class="social-link_Y">Y</a>
                 <a href="index.html#" class="social-link_I">I</a>
-                <a href="index.html#" class="social-link">G</a>
+                <a href="/Admin/admin_cms.html" class="social-link">G</a>
             </div>
             <p class="copyright">© ${year} ${companyName}. All rights reserved.</p>
         </div>
