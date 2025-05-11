@@ -342,11 +342,11 @@ document.addEventListener('DOMContentLoaded', function() {
         // NetlifyCMS 설정
         window.CMS.init({
           config: {
-            backend: {
-              name: 'github',
-              repo: 'your-username/your-repo',
-              branch: 'main',
-            },
+           backend: {
+            name: 'github',
+            repo: 'DGNFP/NFP_Design',
+            branch: 'main',
+          },
             media_folder: 'images/uploads',
             collections: [
               {

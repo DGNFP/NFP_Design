@@ -4,7 +4,19 @@
   <meta charset="UTF-8" />
   <title>NFP DESIGN | Admin</title>
   <!-- <link rel="stylesheet" href="../css/admin_style.css" /> -->
-  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+   <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+  <!-- 추가: Netlify Identity 인증 처리 -->
+  <script>
+    if (window.netlifyIdentity) {
+      window.netlifyIdentity.on("init", user => {
+        if (!user) {
+          window.netlifyIdentity.on("login", () => {
+            document.location.href = "/admin/";
+          });
+        }
+      });
+    }
+  </script>
   <!-- 폰트어썸 아이콘 -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
   <link rel="stylesheet" href="../css/cms-custom.css">
