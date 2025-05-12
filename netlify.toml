@@ -1,7 +1,17 @@
-[build]
+ [build]
+  command = "npm run build"
   publish = "."
 
 [[redirects]]
-  from = "/admin"
-  to = "/admin.html"
+  from = "/admin/*"
+  to = "/admin/index.html"
   status = 200
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-XSS-Protection = "1; mode=block"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Content-Security-Policy = "default-src 'self' https://identity.netlify.com https://unpkg.com https://cdnjs.cloudflare.com; script-src 'self' 'unsafe-inline' https://identity.netlify.com https://unpkg.com https://cdnjs.cloudflare.com; style-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com; img-src 'self' data: blob: https://identity.netlify.com;"

@@ -37,18 +37,6 @@ body {
     /* cursor: url('../img/coser.png') 2 2, auto; */
 }
 
-/* button:hover,
-a:hover,
-input:hover,
-textarea:hover,
-select:hover,
-label:hover, 커서는 호버 이슈로 빼기
-[role="button"]:hover {
-    cursor: url('../img/coser_hover.png') 2 2, auto;
-  } */
-
-
-
 
 
 a {
