@@ -1,62 +1,83 @@
+backend:
+  name: git-gateway
+  branch: main
+
 media_folder: "static/img"
 public_folder: "/img"
+
 collections:
-
-name: "posts"
-label: "게시글"
-folder: "content/posts"
-create: true
-slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
-fields:
-
-{ label: "제목", name: "title", widget: "string" }
-{ label: "게시일", name: "date", widget: "datetime" }
-{
-label: "1차 카테고리",
-name: "category",
-widget: "select",
-options: [
-"웹 디자인",
-"컨텐츠 디자인",
-"영상 디자인",
-"광고/인쇄 디자인"
-]
-}
-{
-label: "2차 카테고리",
-name: "subcategory",
-widget: "select",
-options: {
-"웹 디자인": [
-"홈페이지",
-"디지털배너",
-"상세페이지",
-"UX/UI",
-"기타 (웹디자인)"
-],
-"컨텐츠 디자인": [
-"카드뉴스",
-"포스터",
-"SNS이미지",
-"피드광고",
-"기타 (컨텐츠)"
-],
-"영상 디자인": [
-"영상 제작",
-"영상 편집",
-"모션그래픽",
-"유튜브 썸네일"
-],
-"광고/인쇄 디자인": [
-"현수막/엑스배너",
-"명함",
-"브로슈어/카탈로그",
-"옥외광고",
-"소식"
-]
-}
-}
-{ label: "설명", name: "description", widget: "text", required: false }
-{ label: "썸네일 이미지", name: "thumbnail", widget: "image" }
-{ label: "본문 이미지", name: "body_image", widget: "image", required: false }
-{ label: "본문 내용", name: "body", widget: "markdown" }
+  - name: "posts"
+    label: "게시글"
+    folder: "content/posts"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - label: "제목"
+        name: "title"
+        widget: "string"
+      
+      - label: "게시일"
+        name: "date"
+        widget: "datetime"
+      
+      - label: "1차 카테고리"
+        name: "category"
+        widget: "select"
+        options:
+          - "웹 디자인"
+          - "컨텐츠 디자인"
+          - "영상 디자인"
+          - "광고/인쇄 디자인"
+      
+      - label: "2차 카테고리"
+        name: "subcategory"
+        widget: "select"
+        options:
+          - label: "웹 디자인"
+            options:
+              - "홈페이지"
+              - "디지털배너"
+              - "상세페이지"
+              - "UX/UI"
+              - "기타 (웹디자인)"
+          
+          - label: "컨텐츠 디자인"
+            options:
+              - "카드뉴스"
+              - "포스터"
+              - "SNS이미지"
+              - "피드광고"
+              - "기타 (컨텐츠)"
+          
+          - label: "영상 디자인"
+            options:
+              - "영상 제작"
+              - "영상 편집"
+              - "모션그래픽"
+              - "유튜브 썸네일"
+          
+          - label: "광고/인쇄 디자인"
+            options:
+              - "현수막/엑스배너"
+              - "명함"
+              - "브로슈어/카탈로그"
+              - "옥외광고"
+              - "소식"
+      
+      - label: "설명"
+        name: "description"
+        widget: "text"
+        required: false
+      
+      - label: "썸네일 이미지"
+        name: "thumbnail"
+        widget: "image"
+      
+      - label: "본문 이미지"
+        name: "body_image"
+        widget: "image"
+        required: false
+      
+      - label: "본문 내용"
+        name: "body"
+        widget: "markdown"
