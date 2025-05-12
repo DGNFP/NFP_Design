@@ -185,15 +185,15 @@ document.addEventListener('DOMContentLoaded', function() {
             });
     }
 
-    function getCategoryClass(category) {
-        const categoryMap = {
-            '웹 디자인': 'web',
-            '컨텐츠 디자인': 'content',
-            '영상 디자인': 'video',
-            '광고/인쇄 디자인': 'ad'
-        };
-        return categoryMap[category] || 'all';
-    }
+   function getCategoryClass(category) {
+    const categoryMap = {
+        '웹 디자인': 'web',
+        '컨텐츠 디자인': 'content',
+        '영상 디자인': 'video',
+        '광고/인쇄 디자인': 'ad'
+    };
+    return categoryMap[category] || 'all';
+}
 
     function formatDate(dateString) {
         const date = new Date(dateString);
