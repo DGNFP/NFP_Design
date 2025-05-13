@@ -24,10 +24,10 @@ collections:
         name: "category"
         widget: "select"
         options:
-          - { label: "웹 디자인", value: "web_design" }
-          - { label: "컨텐츠 디자인", value: "content_design" }
-          - { label: "영상 디자인", value: "video_design" }
-          - { label: "광고/인쇄 디자인", value: "ad_print_design" }
+          - { label: "웹 디자인", value: "web" }
+          - { label: "컨텐츠 디자인", value: "contentn" }
+          - { label: "영상 디자인", value: "video" }
+          - { label: "광고/인쇄 디자인", value: "ad" }
       
       - label: "2차 카테고리"
         name: "subcategory"
@@ -61,14 +61,15 @@ collections:
         widget: "text"
         required: false
       
-      - label: "썸네일 이미지"
-        name: "thumbnail"
-        widget: "image"
-      
-      - label: "본문 이미지"
-        name: "body_image"
-        widget: "image"
-        required: false
+      - label: "이미지 갤러리"
+        name: "images"
+        widget: "list"
+        summary: "{{fields.image}}"
+        field:
+          label: 이미지
+          name: image
+          widget: image
+        hint: "여러 이미지를 추가할 수 있습니다. 첫 번째 이미지가 썸네일로 사용됩니다."
       
       - label: "본문 내용"
         name: "body"
