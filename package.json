@@ -1,6 +1,26 @@
 {
   "dependencies": {
+    "@11ty/eleventy": "^3.1.0",
+    "luxon": "^3.6.1",
+    "markdown-it": "^14.1.0",
     "marked": "^15.0.11"
-  }
+  },
+  "name": "nfp_design",
+  "version": "1.0.0",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DGNFP/NFP_Design.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DGNFP/NFP_Design/issues"
+  },
+  "homepage": "https://github.com/DGNFP/NFP_Design#readme",
+  "description": ""
 }
-

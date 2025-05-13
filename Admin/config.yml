@@ -11,6 +11,7 @@ collections:
     folder: "content/posts"
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    preview_path: "/posts/{{slug}}"  # 미리보기 경로 추가
     fields:
       - label: "제목"
         name: "title"
@@ -25,7 +26,7 @@ collections:
         widget: "select"
         options:
           - { label: "웹 디자인", value: "web" }
-          - { label: "컨텐츠 디자인", value: "contentn" }
+          - { label: "컨텐츠 디자인", value: "content" }  # contentn에서 content로 수정
           - { label: "영상 디자인", value: "video" }
           - { label: "광고/인쇄 디자인", value: "ad" }
       
@@ -33,28 +34,32 @@ collections:
         name: "subcategory"
         widget: "select"
         options:
-          - { label: "홈페이지", value: "homepage", group: "웹 디자인" }
-          - { label: "디지털배너", value: "digital_banner", group: "웹 디자인" }
-          - { label: "상세페이지", value: "detail_page", group: "웹 디자인" }
-          - { label: "UX/UI", value: "ux_ui", group: "웹 디자인" }
-          - { label: "기타 (웹디자인)", value: "web_design_etc", group: "웹 디자인" }
+          # 웹 디자인 그룹
+          - { label: "홈페이지", value: "homepage", group: "web" }
+          - { label: "디지털배너", value: "digital_banner", group: "web" }
+          - { label: "상세페이지", value: "detail_page", group: "web" }
+          - { label: "UX/UI", value: "ux_ui", group: "web" }
+          - { label: "기타 (웹디자인)", value: "web_design_etc", group: "web" }
           
-          - { label: "카드뉴스", value: "card_news", group: "컨텐츠 디자인" }
-          - { label: "포스터", value: "poster", group: "컨텐츠 디자인" }
-          - { label: "SNS이미지", value: "sns_image", group: "컨텐츠 디자인" }
-          - { label: "피드광고", value: "feed_ad", group: "컨텐츠 디자인" }
-          - { label: "기타 (컨텐츠)", value: "content_etc", group: "컨텐츠 디자인" }
+          # 컨텐츠 디자인 그룹
+          - { label: "카드뉴스", value: "card_news", group: "content" }
+          - { label: "포스터", value: "poster", group: "content" }
+          - { label: "SNS이미지", value: "sns_image", group: "content" }
+          - { label: "피드광고", value: "feed_ad", group: "content" }
+          - { label: "기타 (컨텐츠)", value: "content_etc", group: "content" }
           
-          - { label: "영상 제작", value: "video_production", group: "영상 디자인" }
-          - { label: "영상 편집", value: "video_editing", group: "영상 디자인" }
-          - { label: "모션그래픽", value: "motion_graphic", group: "영상 디자인" }
-          - { label: "유튜브 썸네일", value: "youtube_thumbnail", group: "영상 디자인" }
+          # 영상 디자인 그룹
+          - { label: "영상 제작", value: "video_production", group: "video" }
+          - { label: "영상 편집", value: "video_editing", group: "video" }
+          - { label: "모션그래픽", value: "motion_graphic", group: "video" }
+          - { label: "유튜브 썸네일", value: "youtube_thumbnail", group: "video" }
           
-          - { label: "현수막/엑스배너", value: "banner_x_banner", group: "광고/인쇄 디자인" }
-          - { label: "명함", value: "business_card", group: "광고/인쇄 디자인" }
-          - { label: "브로슈어/카탈로그", value: "brochure_catalog", group: "광고/인쇄 디자인" }
-          - { label: "옥외광고", value: "outdoor_ad", group: "광고/인쇄 디자인" }
-          - { label: "소식", value: "news", group: "광고/인쇄 디자인" }
+          # 광고/인쇄 디자인 그룹
+          - { label: "현수막/엑스배너", value: "banner_x_banner", group: "ad" }
+          - { label: "명함", value: "business_card", group: "ad" }
+          - { label: "브로슈어/카탈로그", value: "brochure_catalog", group: "ad" }
+          - { label: "옥외광고", value: "outdoor_ad", group: "ad" }
+          - { label: "소식", value: "news", group: "ad" }
       
       - label: "설명"
         name: "description"
@@ -70,6 +75,12 @@ collections:
           name: image
           widget: image
         hint: "여러 이미지를 추가할 수 있습니다. 첫 번째 이미지가 썸네일로 사용됩니다."
+      
+      - label: "썸네일"
+        name: "thumbnail"
+        widget: "hidden"
+        default: "{{images.0.image}}"
+        hint: "이미지 갤러리의 첫 번째 이미지가 자동으로 썸네일로 사용됩니다."
       
       - label: "본문 내용"
         name: "body"
